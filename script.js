@@ -129,12 +129,7 @@ option1.addEventListener("click", () => {
   option2.style.borderBottom = "none";
   farmerSection.style.display = "initial";
   vendorSection.style.display = "none";
-  option2.style.borderBottom = "none";
-  option1.style.backgroundColor = "maroon";
-  option1.style.color = "#fff"
-  option2.style.backgroundColor = "transparent";
-  option2.style.color = "maroon"
-
+  
   gsap.from(".frame-1", {
     x: -80,
     opacity: 0,
@@ -182,10 +177,6 @@ option1.addEventListener("click", () => {
 option2.addEventListener("click", () => {
   option2.style.borderBottom = "2px solid #000000a4";
   option1.style.borderBottom = "none";
-  option2.style.backgroundColor = "maroon";
-  option2.style.color = "#fff"
-  option1.style.backgroundColor = "transparent";
-  option1.style.color = "maroon"
   farmerSection.style.display = "none";
   vendorSection.style.display = "initial";
 
@@ -852,7 +843,18 @@ gsap.from("#fq3", {
 var x = window.matchMedia("(max-width: 400px)");
 function StopGsap(x) {
   console.log(x);
-  if (x.matches) {
+  if (x.matches) {   
+    
+    option2.addEventListener("click", function(){
+      option1.style.backgroundColor = "transparent";
+      option1.style.color = "maroon"
+    })
+
+    option1.addEventListener("click", function(){
+      option1.style.backgroundColor = "maroon";
+      option1.style.color = "#fff";
+    })
+
     scrollable.addEventListener("wheel", (e) => {
       if (e.wheelDelta > 0) {
         scrollable.scrollLeft -= 80;
