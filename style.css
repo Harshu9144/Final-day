@@ -1425,12 +1425,13 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
     margin-left: -35vw;
     width: 85vw;
     line-height: 6vh;
+    margin-top: 4vh;
   }
   .about > p {
     margin-left: -35vw;
     width: 85vw;
     font-size: 0.8rem;
-    margin-top: 5vh;
+    margin-top: 2vh;
   }
   .services {
     width: 100vw;
